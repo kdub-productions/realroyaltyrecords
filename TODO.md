@@ -1,4 +1,4 @@
-- [ ] Download BFG Repo-Cleaner jar
-- [ ] Run BFG to delete node_modules folder from history
-- [ ] Run git reflog expire and gc
-- [ ] Force push the branch to origin
+- [x] Download BFG Repo-Cleaner jar
+- [x] Run BFG to delete node_modules folder from history
+- [x] Run git reflog expire and gc
+- [x] Force push the branch to origin
