@@ -1,0 +1,4 @@
+- [ ] Download BFG Repo-Cleaner jar
+- [ ] Run BFG to delete node_modules folder from history
+- [ ] Run git reflog expire and gc
+- [ ] Force push the branch to origin
