@@ -1,4 +1,3 @@
-- [x] Download BFG Repo-Cleaner jar
-- [x] Run BFG to delete node_modules folder from history
-- [x] Run git reflog expire and gc
-- [x] Force push the branch to origin
+- [x] Update VideoCard.tsx to add interactive video embedding with click to play and close button
+- [ ] Test the video grid and embedding functionality locally
+- [ ] Deploy changes to production and verify videos display correctly in grid without glitches

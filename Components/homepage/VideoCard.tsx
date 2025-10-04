@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 interface Video {
   id: string;
@@ -12,11 +12,31 @@ interface VideoCardProps {
 }
 
 const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
+  const [isPlaying, setIsPlaying] = useState(false);
+
   return (
     <div className="video-card">
-      <img className="thumbnail-image" src={video.thumbnail} alt={video.title} />
-      <h3>{video.title}</h3>
-      <a href={video.videoUrl} target="_blank" rel="noopener noreferrer">Watch Video</a>
+      {isPlaying ? (
+        <div className="video-player">
+          <iframe
+            src={video.videoUrl}
+            title={video.title}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+          <button className="close-button" onClick={() => setIsPlaying(false)}>×</button>
+        </div>
+      ) : (
+        <div className="video-thumbnail" onClick={() => setIsPlaying(true)}>
+          <img className="thumbnail-image" src={video.thumbnail} alt={video.title} />
+          <div className="play-button-overlay">
+            <span className="play-button">▶</span>
+          </div>
+        </div>
+      )}
+      <div className="video-info">
+        <h3>{video.title}</h3>
+      </div>
     </div>
   )
 }
